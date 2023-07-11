@@ -1,24 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
+import pokeImage from './img/poke.png';
+import Botones from './apiPokemon/botones';
+import Buscar from './apiPokemon/buscar';
+import LlamarApi from './apiPokemon/pokeapi';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+
+    <div>
+      <header className="headerFormat">
+        <a href="https://pokeapi.co/"dd>
+          <img alt='imgen Principal' src={pokeImage} width="180px" height="180px"></img>
         </a>
+
+        <div>
+          <Buscar
+            buscar="search"
+          />
+        </div>
+
+        <div className="formDivB">
+          <Botones
+            anterior="back"
+            siguiente="next"
+          />
+        </div>
       </header>
+
+      <section>
+        <div className="formContainerSec">
+          <div className="pokemonInvoke">
+            <LlamarApi/>
+          </div>
+        </div>
+      </section> 
+
     </div>
+
+
   );
 }
 

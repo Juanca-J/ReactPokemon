@@ -1,0 +1,13 @@
+#formSearch{
+    font-style: bold;
+    color: white;
+}
+
+.formB{
+    background: black;
+    border: none;
+}
+.formB:hover{
+    background: rgb(114, 113, 113);
+    border-radius: 5px;
+}
